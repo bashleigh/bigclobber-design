@@ -1,3 +1,11 @@
+.navbar-brand {
+  justify-self: center;
+  img {
+    width: 250px;
+    height: auto;
+  }
+}
+
 .navbar-menu {
   &.category-menu .navbar-center {
     & > li {
@@ -44,11 +52,6 @@
     }
   }
 
-  img {
-    width: 250px;
-    height: auto;
-  }
-
   .navbar-center {
     @extend .navbar-start;
     align-items: center;
@@ -70,7 +73,7 @@
   }
 
   &:nth-child(1) {
-    background: #eaeaea;
+    background: #CACACA;
   }
 
   &:nth-child(3) {
@@ -78,7 +81,74 @@
     border-top: .1em solid #CCCCCC;
   }
 
+  &:nth-child(1),
+  &:nth-child(3) {
+    @media only screen and (max-width: $desktop) {
+      display: none;
+    }
+  }
+
   &.level:not(:last-child) {
     margin-bottom: 0;
+  }
+
+  &.is-centered {
+    @media only screen and (min-width: $desktop) {
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+    }
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  background: $white;
+  width: 80%;
+  top: 0;
+  right: -100%;
+  bottom: 0;
+  z-index: 999;
+
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+
+  &.is-active {
+    right: 0;
+  }
+
+  .control {
+    width:100%;
+    margin: 1rem 3rem;
+  }
+
+  .menu {
+    padding: 1rem 3rem;
+
+  }
+}
+
+#overlay {
+  background: rgba(0,0,0,.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 998;
+  display: none;
+  opacity: 0;
+
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+
+  &.is-active {
+    display: block;
+    opacity: 1;
   }
 }
