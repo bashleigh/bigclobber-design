@@ -1,0 +1,46 @@
+@import "~bulma/sass/utilities/initial-variables";
+@import './_variables';
+@import '~bulma';
+@import '~slick-carousel/slick/slick.scss';
+
+$slick-loader-path: './../../node_modules/slick-carousel/slick/';
+$slick-font-path: './../../node_modules/slick-carousel/slick/fonts/';
+
+@import '~slick-carousel/slick/slick-theme.scss';
+
+@import 'navbar';
+@import 'search';
+@import 'form';
+@import 'slick-theme';
+@import 'footer';
+
+.section.newsletter {
+  background: #f3f3f3;
+}
+
+.columns.tile-grid {
+  margin: 0;
+  .column {
+    @extend .has-text-centered;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-color: #EFEFEF;
+    padding: 0;
+    
+    & > a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+
+      @extend .has-text-white;
+      .title,
+      .subtitle {
+        @extend .has-text-white;
+      }
+    }
+  }
+}

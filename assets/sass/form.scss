@@ -1,0 +1,9 @@
+form {
+  .button.is-primary {
+    &:hover,
+    &:focus,
+    &:active {
+      background: lighten($primary, 15%);
+    }
+  }
+}

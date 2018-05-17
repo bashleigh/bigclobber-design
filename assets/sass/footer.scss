@@ -1,0 +1,47 @@
+footer {
+  @extend .footer;
+  background: $white;
+
+  .subtitle {
+    color: #222222;
+  }
+
+  a {
+    color: #555555;
+  }
+
+  span[class*="fa-cc-"] {
+    font-size: 30px;
+    color: darken($white, 70%);
+  }
+
+  #socialmedia {
+    [class^="fa"] {
+      font-size: 30px;
+      vertical-align: middle;
+
+      &.fa-facebook {
+        color: $facebook-color;
+      }
+      &.fa-twitter {
+        color: $twitter-color;
+      }
+      &.fa-youtube {
+        color: $youtube-color;
+      }
+    }
+  }
+}
+
+.footer-bottom,
+.footer-bottom + div {
+  @extend .section;
+  background: #636363;
+  color: #CCCCCC;
+  @extend .has-text-centered;
+  padding: .5rem;
+  a {
+    color: #CCCCCC;
+    font-size: 10px;
+  }
+}

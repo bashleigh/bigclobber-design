@@ -1,0 +1,84 @@
+.navbar-menu {
+  &.category-menu .navbar-center {
+    & > li {
+      position: relative;
+
+      & > ul {
+        @extend .dropdown-menu;
+        background: #FFFFFF;
+        width: auto;
+        left: -1%;
+        right: -1%;
+        margin: 0;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        & > ul {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .navbar-item.basket {
+    background-color: $primary;
+    color: #FFFFFF;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: lighten($primary, 15%);
+    }
+  }
+
+  .navbar-item.account {
+    background-color: #539dff;
+    color: #FFFFFF;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #7cbcff;
+    }
+  }
+
+  img {
+    width: 250px;
+    height: auto;
+  }
+
+  .navbar-center {
+    @extend .navbar-start;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-weight: bold;
+
+    a {
+      color: $black;
+      text-transform: uppercase;
+
+    }
+  }
+}
+
+.navbar {
+  &:nth-child(2) {
+    padding: 1rem 2rem;
+  }
+
+  &:nth-child(1) {
+    background: #eaeaea;
+  }
+
+  &:nth-child(3) {
+    border-bottom: .1em solid #CCCCCC;
+    border-top: .1em solid #CCCCCC;
+  }
+
+  &.level:not(:last-child) {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,9 @@
+.ct_module_header {
+  display: none;
+
+  & + form {
+    .ct_ps_type {
+      display: none;
+    }
+  }
+}
